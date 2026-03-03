@@ -2,9 +2,9 @@
 // #define CRONOMETRO
 // #define RELOGIO
 // #define RELOGIORTC
-#define RTCLCD
+// #define RTCLCD
 // #define LCDCHAR
-// #define RELOGIOBINRTC
+#define RELOGIOBINRTC
 
 #ifdef CRONOMETRO
 void setupCronometro();
