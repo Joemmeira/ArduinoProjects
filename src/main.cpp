@@ -4,7 +4,8 @@
 // #define RELOGIORTC
 // #define RTCLCD
 // #define LCDCHAR
-#define RELOGIOBINRTC
+// #define RELOGIOBINRTC
+#define LCDKEY
 
 #ifdef CRONOMETRO
 void setupCronometro();
@@ -30,6 +31,11 @@ void loopLcdChar();
 void setupBinRtc();
 void loopBinRtc();
 #endif
+#ifdef LCDKEY
+void setupMLK();
+void loopMLK();
+#endif
+
 
 void setup() {
     #ifdef CRONOMETRO
@@ -50,9 +56,16 @@ void setup() {
     #ifdef RELOGIOBINRTC
     setupBinRtc();
     #endif
+    #ifdef LCDKEY
+    setupMLK();
+    #endif
+
 }
 
 void loop() {
+    #ifdef LCDKEY
+    loopMLK();
+    #endif
     #ifdef RELOGIO
     loopRelogio();
     #endif
