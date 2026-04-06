@@ -5,8 +5,13 @@
 // #define RTCLCD
 // #define LCDCHAR
 // #define RELOGIOBINRTC
-#define LCDKEY
+// #define LCDKEY
+#define MOLDARIUMLCD
 
+#ifdef MOLDARIUMLCD
+void setupM3D();
+void loopM3D();
+#endif
 #ifdef CRONOMETRO
 void setupCronometro();
 void loopCronometro();
@@ -59,7 +64,9 @@ void setup() {
     #ifdef LCDKEY
     setupMLK();
     #endif
-
+    #ifdef MOLDARIUMLCD
+    setupM3D();
+    #endif
 }
 
 void loop() {
@@ -83,5 +90,8 @@ void loop() {
     #endif
     #ifdef RELOGIOBINRTC
     loopBinRtc();
+    #endif
+    #ifdef MOLDARIUMLCD
+    loopM3D();
     #endif
 }

@@ -9,3 +9,9 @@ no ciclo de desenvolvimento.
 Mais informações sobre PlatformIO Unit Testing:
 
 - https://docs.platformio.org/en/latest/advanced/unit-testing/index.html
+
+-------------------------------------------------------------------------
+Para auterar ente arduino uno e nano mude no platformio.ini a linha
+
+board = uno
+board = nanoatmega328
