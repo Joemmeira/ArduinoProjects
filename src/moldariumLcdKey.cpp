@@ -87,10 +87,9 @@ void keypad(){
   } 
   else if (leitura < 350) {
     lcdk.print("DOWN");
-} 
-else if (leitura < 500) {
+  }
+  else if (leitura < 500) {
     lcdk.print("LEFT");
-
   } 
   else if (leitura < 800) {
     lcdk.print("SELECT");
